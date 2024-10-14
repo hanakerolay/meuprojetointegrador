@@ -95,15 +95,45 @@ body {
 
 .img1{
     height: 60px;
-    width: 700px;
+    width: 691px;
 }
 
-
-
-
-
+article {
+    display: inline-block;
+    width: 25%;
+}
 /* .infoma {
     display: flex;
 } */
 
 
+.catalogo {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os cartões */
+    overflow-x: auto; /* Rolar horizontalmente */
+    padding: 10px;
+    scroll-behavior: smooth; /* Suaviza a rolagem */
+}
+
+.catalogo::-webkit-scrollbar {
+    height: 12px; /* Tamanho da barra de rolagem */
+}
+
+.catalogo::-webkit-scrollbar-thumb {
+    background-color: #fc7ffe; /* Cor da barra de rolagem */
+    border-radius: 5px;
+}
+
+.card {
+    flex: 0 0 auto; /* Evita que o cartão encolha ou estique */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar os cartões */
+}
+
+.card-body {
+    text-align: center; /* Centraliza o texto e o botão */
+}
+
+.catalogo article {
+    min-width: 18rem; /* Garante que todos os cartões tenham o mesmo tamanho */
+}
