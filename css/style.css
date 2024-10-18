@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, Arial, sans-serif;
 }
 
 /* Barra superior com gradiente */
@@ -138,53 +138,41 @@ article {
     min-width: 18rem; /* Garante que todos os cartões tenham o mesmo tamanho */
 }
 
+.custom-hr {
+    height: 15px; /* Altura da barra */
+    background-color: #ee1aaf; /* Cor da barra */
+    width: 40%; /* Largura desejada (ajuste aqui) */
+    margin: 10px auto; /* Centraliza a barra */
+}
+
+.card-img-top {
+    height: 200px; /* Defina a altura desejada */
+    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
+    width: 100%; /* Garante que a largura seja 100% do cartão */
+}
 
 
 
+ /* localização */
+.location{
+    width: 25%;
+}
 
+ /* Ajustando o tamanho do carrossel */
+#carouselExampleSlidesOnly {
+    width: 90%; /* Aumenta a largura para ocupar todo o espaço disponível */
+    max-width: 500px; /* Ajuste o valor conforme necessário para aumentar horizontalmente */
+    height: 50px; /* Reduz a altura */
+    margin: 0 auto; /* Centraliza o carrossel */
+}
 
+.tamanho {
+    height: 350px;
+    float: right;
+    width:50%;
+    border: 2px solid black;
+}
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-}
-.header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.header h1 {
-    font-size: 24px;
-    margin: 0;
-}
-.content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-.contact-info, .helpdesk, .location {
-    width: 30%;
-}
-.location iframe {
-    width: 100%;
-    height: 200px;
-}
-.feedback {
-    text-align: center;
-}
-.feedback p {
-    font-size: 16px;
-    margin: 10px 0;
-}
-.feedback button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-.feedback button:hover {
-    background-color: #0056b3;
+.custom-bg {
+    background-color: rgb(247, 237, 245); /* Cor de fundo desejada */
 }
