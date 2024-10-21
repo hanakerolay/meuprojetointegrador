@@ -8,10 +8,11 @@
 </head>
 <body>
 <div class="container mt-4">
-    <form>
+    <form id="formColaborador">
         <div class="row">
-            <h1>Administração de colaboradore</h1>
-            <!-- Dados Pessoais -->
+            <h1>Administração de colaboradores</h1>
+            <a href="index.html" type="button" class="Voltaaoinicio" style="margin-top: 20px;">Volta ao início</a>
+            <h6>Cadastrar colaboradores</h6>
             <div class="col-md-6 border p-3">
                 <h5>Dados Pessoais</h5>
                 <div class="mb-3">
@@ -19,18 +20,35 @@
                     <input type="text" class="form-control" id="nome" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Sexo:</label>
-                    <div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
-                            <label class="form-check-label" for="masculino">Masculino</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label">Sexo:</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
+                                    <label class="form-check-label" for="feminino">Feminino</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
-                            <label class="form-check-label" for="feminino">Feminino</label>
+
+                        <div class="col-md-6">
+                            <label for="foto" class="form-label">Foto:</label>
+                            <div class="d-flex align-items-center">
+                                <img src="https://via.placeholder.com/100" alt="Foto de perfil" class="img-thumbnail me-2" id="fotoPerfil">
+                                <div>
+                                    <button class="btn btn-outline-success">Adicionar</button>
+                                    <br><br>
+                                    <button class="btn btn-outline-danger btn-sm">Excluir Imagem</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="mb-3">
                     <label for="nascimento" class="form-label">Data de Nascimento*</label>
                     <input type="date" class="form-control" id="nascimento" required>
@@ -62,7 +80,6 @@
                 </div>
             </div>
 
-            <!-- Localidade -->
             <div class="col-md-6 border p-3">
                 <h5>Localidade</h5>
                 <div class="mb-3">
@@ -89,16 +106,29 @@
                     <label for="uf" class="form-label">Unidade Federativa</label>
                     <select class="form-select" id="uf">
                         <option value="" selected disabled>Selecione</option>
-                        <option value="SP">SP</option>
-                        <option value="RJ">RJ</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
                         <option value="MG">MG</option>
                     </select>
+                </div>
+                <div class="mb-3">
+                    <label for="departamento" class="form-label">Departamento:</label>
+                    <div class="input-group">
+                        <select class="form-select" id="departamento">
+                            <option value="Clinica" selected>Clinica</option>
+                            <option value="Vendas">Vendas</option>
+                            <option value="Financeiro">Financeiro</option>
+                            <option value="Administração">Administração</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="row mt-3">
-            <!-- Contato -->
             <div class="col-md-6 border p-3">
                 <h5>Contato</h5>
                 <div class="mb-3">
@@ -109,7 +139,6 @@
                     <label for="telefone" class="form-label">Email</label>
                     <input type="text" class="form-control" id="telefone">
                 </div>
-                
                 <div class="mb-3">
                     <label for="fax" class="form-label">Fax</label>
                     <input type="text" class="form-control" id="fax">
@@ -118,10 +147,12 @@
                     <label for="celular" class="form-label">Celular</label>
                     <input type="text" class="form-control" id="celular">
                 </div>
+                <div class="mb-3">
+                    <label for="observacoes" class="form-label">Observações:</label>
+                    <textarea class="form-control" id="observacoes" rows="4"></textarea>
+                </div>
             </div>
-            
 
-            <!-- Documentação -->
             <div class="col-md-6 border p-3">
                 <h5>Documentação</h5>
                 <div class="mb-3">
@@ -137,139 +168,136 @@
                     <input type="text" class="form-control" id="orgao">
                 </div>
                 <div class="mb-3">
-                    <label for="uf-doc" class="form-label">Unidade Federativa</label>
-                    <select class="form-select" id="uf-doc">
-                        <option value="" selected disabled>Selecione</option>
-                        <option value="SP">SP</option>
-                        <option value="RJ">RJ</option>
-                        <option value="MG">MG</option>
-                    </select>
-                </div>
-                <div class="mb-3">
                     <label for="data-emissao" class="form-label">Data de Emissão</label>
                     <input type="date" class="form-control" id="data-emissao">
                 </div>
-            </div>
-        </div>
-
-        <div class="row mt-3">
-            <div class="col text-end">
-                <button type="submit" class="btn btn-success">Cadastrar colaborador</button>
-                <button type="submit" class="btn btn-success">consulta colaboradores</button>
-            </div>
-        </div>
-    </form>
-</div>
-
-
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário com Foto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<div class="container mt-4">
-    <form>
-        <div class="row">
-            <form class="d-flex" role="search">
-                <div class="position-relative">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <i class="bi bi-search-heart position-absolute top-50 end-0 translate-middle-y me-3"></i>
-                </div>
-                <br>
-                <button class="btn rounded-pill" type="submit"
-                    style="background-color: #0aee29; color: white;">Pesquisa</button>
-            </form>
-            <!-- Coluna Esquerda -->
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="unidadeNegocio" class="form-label">Unidade de Negócio:</label>
-                    <select class="form-select" id="unidadeNegocio">
-                        <option value="Centro">Centro</option>
-                        <option value="Filial 1">Filial 1</option>
-                        <option value="Filial 2">Filial 2</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="cpf" class="form-label">CPF:</label>
-                    <input type="text" class="form-control" id="cpf" value="226.982.636-10">
-                </div>
-                <div class="mb-3">
-                    <label for="observacoes" class="form-label">Observações:</label>
-                    <textarea class="form-control" id="observacoes" rows="4"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="usuarioSistema" class="form-label">Usuário do Sistema:</label>
-                    <select class="form-select" id="usuarioSistema">
-                        <option value="bianca.araujo" selected>bianca.araujo</option>
-                        <option value="joao.silva">joao.silva</option>
-                        <option value="maria.souza">maria.souza</option>
-                    </select>
-                    <small class="form-text text-muted">
-                        <a href="#" class="link-info">Saiba mais</a> <i class="bi bi-question-circle"></i>
-                    </small>
-                </div>
-            </div>
-
-            <!-- Coluna Direita -->
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="nome" class="form-label">*Nome:</label>
-                    <input type="text" class="form-control" id="nome" value="Bianca Sousa Araujo" required>
-                </div>
-                <div class="mb-3">
-                    <label for="rg" class="form-label">RG:</label>
-                    <input type="text" class="form-control" id="rg">
-                </div>
-                <div class="mb-3">
-                    <label for="departamento" class="form-label">Departamento:</label>
-                    <div class="input-group">
-                        <select class="form-select" id="departamento">
-                            <option value="Compras" selected>Compras</option>
-                            <option value="Vendas">Vendas</option>
-                            <option value="Financeiro">Financeiro</option>
-                        </select>
-                        <button class="btn btn-outline-secondary" type="button">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </div>
                 <div class="mb-3">
                     <label for="funcao" class="form-label">Função:</label>
-                    <input type="text" class="form-control" id="funcao" value="Gerente">
+                    <input type="text" class="form-control" id="funcao" value="Digite a função">
                 </div>
                 <div class="mb-3">
-                    <label for="valorHora" class="form-label">Valor Hora (R$):</label>
-                    <input type="text" class="form-control" id="valorHora" value="30,00">
-                </div>
-                <div class="mb-3">
-                    <label for="foto" class="form-label">Foto:</label>
-                    <div class="d-flex align-items-center">
-                        <img src="https://via.placeholder.com/100" alt="Foto de perfil" class="img-thumbnail me-2" id="fotoPerfil">
-                        <div>
-                            <button class="btn btn-outline-danger btn-sm">Excluir Imagem</button>
-                        </div>
-                    </div>
+                    <label for="valorHora" class="form-label">Valor remuneração(R$):</label>
+                    <input type="text" class="form-control" id="valorHora">
                 </div>
             </div>
         </div>
 
         <div class="row mt-3">
-            <div class="col text-end">
-                <button type="submit" class="btn btn-success">Editar colaborador</button>
-                <button type="submit" class="btn btn-danger">Excluir colaborador</button>
+            <div class="col">
+                <button type="button" id="btn-cadastrar" class="btn btn-success">Cadastrar colaborador</button>
             </div>
+            <div id="msg" class="mt-2"></div>
         </div>
     </form>
 </div>
 
+<div class="container mt-4">
+    <form class="d-flex" id="formPesquisa" role="search">
+        <div class="position-relative">
+            <input class="form-control" type="search" id="searchInput" placeholder="Digite o nome ou CPF do colaborador" aria-label="Search">
+            <button class="btn btn-primary" type="button" id="btn-pesquisar">Pesquisar</button>
+        </div>
+    </form>
 
+    <table class="table mt-4" id="tabelaColaboradores" style="display:none;">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Data de Nascimento</th>
+                <th>Sexo</th>
+                <th>Naturalidade</th>
+                <th>Celular</th>
+                <th>Valor Renumeração (R$)</th>
+                <th>Função</th>
+                <th>Departamento</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaCorpo">
+            <!-- Resultados da pesquisa aparecerão aqui -->
+        </tbody>
+    </table>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Script -->
+<script>
+    let listaColaboradores = [];
+    let idCounter = 0;
+
+    function cadastrarColaborador(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const cpf = document.getElementById("cpf").value; 
+        const funcao = document.getElementById("funcao").value; 
+        const departamento = document.getElementById("departamento").value;
+        const nascimento = document.getElementById("nascimento").value;
+        const sexo = document.querySelector('input[name="sexo"]:checked')?.value;
+        const naturalidade = document.getElementById("naturalidade").value;
+        const celular = document.getElementById("celular").value;
+        const valorHora = document.getElementById("valorHora").value;
+
+        if (nome && cpf) {
+            let colaborador = {
+                id: idCounter++,
+                nome: nome,
+                cpf: cpf,
+                nascimento: nascimento,
+                sexo: sexo,
+                naturalidade: naturalidade,
+                celular: celular,
+                valorHora: valorHora,
+                funcao: funcao,
+                departamento: departamento
+            };
+
+            listaColaboradores.push(colaborador);
+            document.getElementById("msg").innerHTML = "<p class='text-success'>Colaborador cadastrado com sucesso!</p>";
+            document.getElementById("formColaborador").reset();
+            mostrarColaboradores();
+        } else {
+            document.getElementById("msg").innerHTML = "<p class='text-danger'>Por favor, preencha todos os campos obrigatórios.</p>";
+        }
+    }
+
+    function mostrarColaboradores() {
+        console.log(listaColaboradores);
+    }
+
+    function pesquisarColaboradores() {
+        const searchValue = document.getElementById("searchInput").value.toLowerCase();
+        const resultados = listaColaboradores.filter(colaborador =>
+            colaborador.nome.toLowerCase().includes(searchValue) || colaborador.cpf.includes(searchValue)
+        );
+
+        const tabelaCorpo = document.getElementById("tabelaCorpo");
+        tabelaCorpo.innerHTML = ""; // Limpa resultados anteriores
+
+        if (resultados.length > 0) {
+            resultados.forEach(colaborador => {
+                const row = `<tr>
+                    <td>${colaborador.nome}</td>
+                    <td>${colaborador.cpf}</td>
+                    <td>${colaborador.nascimento}</td>
+                    <td>${colaborador.sexo}</td>
+                    <td>${colaborador.naturalidade}</td>
+                    <td>${colaborador.celular}</td>
+                    <td>${colaborador.valorHora}</td>
+                    <td>${colaborador.funcao}</td>
+                    <td>${colaborador.departamento}</td>
+                </tr>`;
+                tabelaCorpo.innerHTML += row;
+            });
+            document.getElementById("tabelaColaboradores").style.display = "table"; // Mostra a tabela
+        } else {
+            document.getElementById("tabelaColaboradores").style.display = "none"; // Esconde a tabela se não houver resultados
+        }
+    }
+
+    document.getElementById("btn-cadastrar").addEventListener("click", cadastrarColaborador);
+    document.getElementById("btn-pesquisar").addEventListener("click", pesquisarColaboradores);
+</script>
 </body>
 </html>
+
+
