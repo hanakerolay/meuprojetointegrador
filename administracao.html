@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <form>
+        <div class="row">
+            <h1>Administração de colaboradore</h1>
+            <!-- Dados Pessoais -->
+            <div class="col-md-6 border p-3">
+                <h5>Dados Pessoais</h5>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome*</label>
+                    <input type="text" class="form-control" id="nome" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Sexo:</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
+                            <label class="form-check-label" for="masculino">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
+                            <label class="form-check-label" for="feminino">Feminino</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="nascimento" class="form-label">Data de Nascimento*</label>
+                    <input type="date" class="form-control" id="nascimento" required>
+                </div>
+                <div class="mb-3">
+                    <label for="naturalidade" class="form-label">Naturalidade*</label>
+                    <select class="form-select" id="naturalidade" required>
+                        <option value="" selected disabled>Selecione</option>
+                        <option value="brasileiro">Brasileiro</option>
+                        <option value="estrangeiro">Estrangeiro</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="escolaridade" class="form-label">Escolaridade*</label>
+                    <select class="form-select" id="escolaridade" required>
+                        <option value="" selected disabled>Selecione</option>
+                        <option value="fundamental">Fundamental</option>
+                        <option value="medio">Médio</option>
+                        <option value="superior">Superior</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="mae" class="form-label">Nome da Mãe</label>
+                    <input type="text" class="form-control" id="mae">
+                </div>
+                <div class="mb-3">
+                    <label for="pai" class="form-label">Nome do Pai</label>
+                    <input type="text" class="form-control" id="pai">
+                </div>
+            </div>
+
+            <!-- Localidade -->
+            <div class="col-md-6 border p-3">
+                <h5>Localidade</h5>
+                <div class="mb-3">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="cep">
+                </div>
+                <div class="mb-3">
+                    <label for="endereco" class="form-label">Endereço</label>
+                    <input type="text" class="form-control" id="endereco">
+                </div>
+                <div class="mb-3">
+                    <label for="complemento" class="form-label">Complemento</label>
+                    <input type="text" class="form-control" id="complemento">
+                </div>
+                <div class="mb-3">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" id="bairro">
+                </div>
+                <div class="mb-3">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cidade">
+                </div>
+                <div class="mb-3">
+                    <label for="uf" class="form-label">Unidade Federativa</label>
+                    <select class="form-select" id="uf">
+                        <option value="" selected disabled>Selecione</option>
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                        <option value="MG">MG</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <!-- Contato -->
+            <div class="col-md-6 border p-3">
+                <h5>Contato</h5>
+                <div class="mb-3">
+                    <label for="ddd" class="form-label">Telefone</label>
+                    <input type="text" class="form-control" id="ddd">
+                </div>
+                <div class="mb-3">
+                    <label for="telefone" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="telefone">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="fax" class="form-label">Fax</label>
+                    <input type="text" class="form-control" id="fax">
+                </div>
+                <div class="mb-3">
+                    <label for="celular" class="form-label">Celular</label>
+                    <input type="text" class="form-control" id="celular">
+                </div>
+            </div>
+            
+
+            <!-- Documentação -->
+            <div class="col-md-6 border p-3">
+                <h5>Documentação</h5>
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF*</label>
+                    <input type="text" class="form-control" id="cpf" required>
+                </div>
+                <div class="mb-3">
+                    <label for="identidade" class="form-label">Identidade</label>
+                    <input type="text" class="form-control" id="identidade">
+                </div>
+                <div class="mb-3">
+                    <label for="orgao" class="form-label">Orgão Emissor</label>
+                    <input type="text" class="form-control" id="orgao">
+                </div>
+                <div class="mb-3">
+                    <label for="uf-doc" class="form-label">Unidade Federativa</label>
+                    <select class="form-select" id="uf-doc">
+                        <option value="" selected disabled>Selecione</option>
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                        <option value="MG">MG</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="data-emissao" class="form-label">Data de Emissão</label>
+                    <input type="date" class="form-control" id="data-emissao">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col text-end">
+                <button type="submit" class="btn btn-success">Cadastrar colaborador</button>
+                <button type="submit" class="btn btn-success">consulta colaboradores</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Foto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <form>
+        <div class="row">
+            <form class="d-flex" role="search">
+                <div class="position-relative">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <i class="bi bi-search-heart position-absolute top-50 end-0 translate-middle-y me-3"></i>
+                </div>
+                <br>
+                <button class="btn rounded-pill" type="submit"
+                    style="background-color: #0aee29; color: white;">Pesquisa</button>
+            </form>
+            <!-- Coluna Esquerda -->
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="unidadeNegocio" class="form-label">Unidade de Negócio:</label>
+                    <select class="form-select" id="unidadeNegocio">
+                        <option value="Centro">Centro</option>
+                        <option value="Filial 1">Filial 1</option>
+                        <option value="Filial 2">Filial 2</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF:</label>
+                    <input type="text" class="form-control" id="cpf" value="226.982.636-10">
+                </div>
+                <div class="mb-3">
+                    <label for="observacoes" class="form-label">Observações:</label>
+                    <textarea class="form-control" id="observacoes" rows="4"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="usuarioSistema" class="form-label">Usuário do Sistema:</label>
+                    <select class="form-select" id="usuarioSistema">
+                        <option value="bianca.araujo" selected>bianca.araujo</option>
+                        <option value="joao.silva">joao.silva</option>
+                        <option value="maria.souza">maria.souza</option>
+                    </select>
+                    <small class="form-text text-muted">
+                        <a href="#" class="link-info">Saiba mais</a> <i class="bi bi-question-circle"></i>
+                    </small>
+                </div>
+            </div>
+
+            <!-- Coluna Direita -->
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">*Nome:</label>
+                    <input type="text" class="form-control" id="nome" value="Bianca Sousa Araujo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="rg" class="form-label">RG:</label>
+                    <input type="text" class="form-control" id="rg">
+                </div>
+                <div class="mb-3">
+                    <label for="departamento" class="form-label">Departamento:</label>
+                    <div class="input-group">
+                        <select class="form-select" id="departamento">
+                            <option value="Compras" selected>Compras</option>
+                            <option value="Vendas">Vendas</option>
+                            <option value="Financeiro">Financeiro</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="funcao" class="form-label">Função:</label>
+                    <input type="text" class="form-control" id="funcao" value="Gerente">
+                </div>
+                <div class="mb-3">
+                    <label for="valorHora" class="form-label">Valor Hora (R$):</label>
+                    <input type="text" class="form-control" id="valorHora" value="30,00">
+                </div>
+                <div class="mb-3">
+                    <label for="foto" class="form-label">Foto:</label>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/100" alt="Foto de perfil" class="img-thumbnail me-2" id="fotoPerfil">
+                        <div>
+                            <button class="btn btn-outline-danger btn-sm">Excluir Imagem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col text-end">
+                <button type="submit" class="btn btn-success">Editar colaborador</button>
+                <button type="submit" class="btn btn-danger">Excluir colaborador</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

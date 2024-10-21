@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .requisitos-senha {
+            color: #007bff;
+            cursor: pointer;
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #36e636;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.cancelar {
+            background-color: #f40808;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Escolha uma Nova Senha</h1>
+    <form action="redefinir-senha.php" method="POST">
+        <label for="username">Nome de Usuário *</label>
+        <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+
+        <label for="novaSenha">Nova Senha *</label>
+        <input type="password" id="novaSenha" name="novaSenha" placeholder="Digite sua nova senha" required>
+
+        <label for="confirmSenha">Reinserir Senha *</label>
+        <input type="password" id="confirmSenha" name="confirmSenha" placeholder="Digite sua senha novamente" required>
+
+        <a class="requisitos-senha" href="#">Exibir requisitos de senha</a>
+
+        <div class="button-container">
+            <button type="submit">Enviar</button>
+            <button type="button" class="cancelar">Cancelar</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

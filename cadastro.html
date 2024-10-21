@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h3 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+
+        .sec1, .bai {
+            margin-bottom: 30px;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 20px; /* Espaço entre os campos */
+            justify-content: space-between;
+        }
+
+        .flex-item {
+            flex: 1;
+        }
+
+        .botao {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .flex-item-sexo {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espaço entre os itens */
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaço entre os itens */
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre o checkbox e o texto */
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="sec1">
+            <h1>Faça seu Cadastro</h1>
+            <form id="cadastroForm">
+                <label for="nome"><i class="fa-regular fa-user"></i> Nome</label>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+    
+                <label for="nomeCompleto"><i class="fa-solid fa-user"></i> Nome Completo</label>
+                <input type="text" id="nomeCompleto" placeholder="Digite seu nome completo">
+    
+                <label for="cpf"><i class="fa-solid fa-file"></i> CPF</label>
+                <input type="text" id="cpf" placeholder="000.000.000-00">
+    
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" id="dataNascimento">
+    
+                <label for="email"><i class="fa-solid fa-envelope"></i> E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu email">
+    
+                <label for="celular">Celular</label>
+                <input type="tel" id="celular" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="00 00000-0000">
+    
+                <label for="endereco"><i class="fa-solid fa-location-dot"></i> Endereço</label>
+                <input type="text" id="endereco" placeholder="Digite seu endereço">
+            </form>
+        </div>
+    
+        <div class="bai">
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro">
+    
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" placeholder="00000-000">
+        </div>
+    
+        <!-- Aqui começa a seção de Sexo e Estado Civil lado a lado -->
+        <div class="flex-container">
+            <div class="flex-item-sexo">
+                <label for="sexo">Sexo</label>
+                <input type="radio" id="masculino" name="sexo" value="M">
+                <label for="masculino">M</label>
+                <input type="radio" id="feminino" name="sexo" value="F">
+                <label for="feminino">F</label>
+            </div>
+    
+            <div class="flex-item">
+                <label for="estadoCivil">Estado Civil</label>
+                <select name="estadoCivil" id="estadoCivil">
+                    <option value="solteiro">Solteiro</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viuvo">Viúvo</option>
+                    <option value="uniaoEstavel">União Estável</option>
+                </select>
+            </div>
+        </div>
+        <!-- Aqui termina a seção lado a lado -->
+    
+        <!-- Seção de Senha e Login lado a lado -->
+        <div class="flex-container">
+            <div class="flex-item">
+                <label for="pwd">Senha:</label>
+                <input type="password" id="pwd" name="pwd">
+            </div>
+    
+            <div class="flex-item">
+                <label for="login">Login</label>
+                <input type="text" id="login" name="login" placeholder="Digite seu login">
+            </div>
+        </div>
+        <!-- Aqui termina a seção de Senha e Login lado a lado -->
+    
+        <h3>Deseja receber informações sobre os seguintes assuntos:</h3>
+        <div class="checkbox-container">
+            <div class="checkbox-item">
+                <input type="checkbox" id="tecnologia" name="interesse" value="tecnologia">
+                <label for="tecnologia">Consultar</label>
+            </div>
+    
+            <div class="checkbox-item">
+                <input type="checkbox" id="esportes" name="interesse" value="esportes">
+                <label for="esportes">Agendamento</label>
+            </div>
+    
+            <div class="checkbox-item">
+                <input type="checkbox" id="automoveis" name="interesse" value="automoveis">
+                <label for="automoveis">Exames</label>
+            </div>
+    
+            <div class="checkbox-item">
+                <input type="checkbox" id="culinaria" name="interesse" value="culinaria">
+                <label for="culinaria">Produtos</label>
+            </div>
+    
+            <div class="checkbox-item">
+                <input type="checkbox" id="politica" name="interesse" value="politica">
+                <label for="politica">Combos exclusivos</label>
+            </div>
+    
+            <div class="checkbox-item">
+                <input type="checkbox" id="policial" name="interesse" value="policial">
+                <label for="policial">Promoções</label>
+            </div>
+    
+            <div class="checkbox-item">
+                <input type="checkbox" id="tempo" name="interesse" value="tempo">
+                <label for="tempo">Novidades</label>
+            </div>
+        </div>
+    
+        <div class="botao">
+            <button type="button" id="cadastrarBtn">Cadastrar</button>
+            <button><a href="index.html" class="btn btn-primary rounded-pill" style="margin-top: 20px;">Retornar</a></button>
+
+        </div>
+    
+        <!-- Mensagem de sucesso -->
+        <div id="mensagemSucesso" style="display: none; margin-top: 20px; color: green;">
+            Usuário cadastrado com sucesso.
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('cadastrarBtn').addEventListener('click', function() {
+            // Exibir a mensagem de sucesso
+            document.getElementById('mensagemSucesso').style.display = 'block';
+    
+            // Opcional: Limpar o formulário após o cadastro
+            document.getElementById('cadastroForm').reset();
+        });
+    
+        document.getElementById('retornarBtn').addEventListener('click', function() {
+            // Redirecionar para a página principal
+            window.location.href = 'pagina_principal.html'; // Altere para a URL da sua página principal
+        });
+    </script>
+    
+</body>
+</html>    
